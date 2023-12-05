@@ -1,0 +1,9 @@
+2023-08-31 04:00:44: Requester application has been started
+2023-08-31 04:00:44: Open NamedPipe to receive data, and send data to shared memory..
+2023-08-31 04:00:44: Extracting data from shared memory..
+2023-08-31 04:00:44: Shared memory is closed ..
+2023-08-31 11:02:12: Requester application has been started
+2023-08-31 11:02:12: Open NamedPipe to receive data, and send data to shared memory..
+2023-08-31 11:02:12: Extracting data from shared memory..
+2023-08-31 11:02:12: Shared memory is closed ..
+

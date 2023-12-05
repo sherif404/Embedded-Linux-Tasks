@@ -1,0 +1,18 @@
+The command used to build the static library:
+->  ar rcs libname.a main.o		// libname.a is library name , main.o is object file added to library
+
+
+The command to be used to link the static library to the test app:
+-> cc main.c libname.a    //in case both files in the same dir 
+or
+-> cc main.c -l libname    //in case libname in the standard location of libraries
+
+
+The command used to build the shared library
+-> gcc -c -Wall -Werror -fpic main.c 
+then
+-> gcc -shared -o libname.so main.o 
+
+
+The command used to link the shared library to the test app
+-> gcc -L /home/sherif/Slibraries -wall -o test main.c -l mathlib    //replace the path /home/sherif/Slibraries to yours.

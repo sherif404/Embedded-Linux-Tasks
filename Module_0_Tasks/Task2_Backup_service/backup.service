@@ -1,0 +1,11 @@
+[Unit]
+Description=Automated backup
+After=network.target
+
+[Service]
+ExecStart= /bin/backup.sh 
+
+
+[Install]
+WantedBy=multi-user.target
+
