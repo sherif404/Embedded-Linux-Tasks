@@ -1,0 +1,5 @@
+# List of applications to be launched during boot
+math_app
+print_app
+count_app
+

@@ -1,0 +1,158 @@
+From dfccb6c5559bda4a2947d0dfb2316afdf6c4e41a Mon Sep 17 00:00:00 2001
+From: Sherif Adel Refay <sherif.adel440@gmail.com>
+Date: Tue, 22 Aug 2023 00:57:24 +0300
+Subject: [PATCH] reconfigure and rebuild U-boot
+
+---
+ include/autoconf.mk.dep | 74 ++++++++++++++++-------------------------
+ include/config.h        |  4 +--
+ 2 files changed, 30 insertions(+), 48 deletions(-)
+
+diff --git a/include/autoconf.mk.dep b/include/autoconf.mk.dep
+index 1de7e38a41..0f73c904f2 100644
+--- a/include/autoconf.mk.dep
++++ b/include/autoconf.mk.dep
+@@ -1,30 +1,26 @@
+ include/config/auto.conf: include/common.h include/linux/kconfig.h \
+- include/generated/autoconf.h include/config.h include/configs/rpi.h \
+- include/linux/sizes.h include/linux/const.h \
+- arch/arm/include/asm/arch/timer.h arch/arm/include/asm/arch/base.h \
+- include/linux/bug.h include/vsprintf.h \
+- /home/sherif/x-tools/aarch64-rpi4-linux-gnu/lib/gcc/aarch64-rpi4-linux-gnu/9.4.0/include/stdarg.h \
+- include/linux/types.h include/linux/posix_types.h include/linux/stddef.h \
++ include/generated/autoconf.h include/config.h include/configs/qemu-arm.h \
++ arch/arm/include/asm/config.h include/linux/kconfig.h \
++ include/config_fallbacks.h include/errno.h include/linux/errno.h \
++ include/time.h include/linux/typecheck.h include/linux/types.h \
++ include/linux/posix_types.h include/linux/stddef.h \
+  include/linux/compiler_types.h include/linux/compiler_attributes.h \
+  include/linux/compiler-gcc.h arch/arm/include/asm/posix_types.h \
+  arch/arm/include/asm/types.h include/asm-generic/int-ll64.h \
+  /home/sherif/x-tools/aarch64-rpi4-linux-gnu/lib/gcc/aarch64-rpi4-linux-gnu/9.4.0/include/stdbool.h \
+- include/linux/build_bug.h include/linux/compiler.h \
+  include/linux/printk.h include/log.h include/stdio.h \
+- include/linker_lists.h include/dm/uclass-id.h include/linux/bitops.h \
+- include/asm-generic/bitsperlong.h include/linux/kernel.h \
+- arch/arm/include/asm/bitops.h include/asm-generic/bitops/__ffs.h \
+- include/asm-generic/bitops/__fls.h include/asm-generic/bitops/fls.h \
+- include/asm-generic/bitops/fls64.h \
++ /home/sherif/x-tools/aarch64-rpi4-linux-gnu/lib/gcc/aarch64-rpi4-linux-gnu/9.4.0/include/stdarg.h \
++ include/linux/compiler.h include/linker_lists.h include/dm/uclass-id.h \
++ include/linux/bitops.h include/asm-generic/bitsperlong.h \
++ include/linux/kernel.h arch/arm/include/asm/bitops.h \
++ include/asm-generic/bitops/__ffs.h include/asm-generic/bitops/__fls.h \
++ include/asm-generic/bitops/fls.h include/asm-generic/bitops/fls64.h \
+  arch/arm/include/asm/proc-armv/system.h include/linux/list.h \
+- include/linux/poison.h include/config_distro_bootcmd.h \
+- arch/arm/include/asm/config.h include/linux/kconfig.h \
+- include/config_fallbacks.h include/errno.h include/linux/errno.h \
+- include/time.h include/linux/typecheck.h include/linux/string.h \
++ include/linux/poison.h include/linux/string.h \
+  arch/arm/include/asm/string.h include/linux/linux_string.h \
+  arch/arm/include/asm/u-boot.h include/asm-generic/u-boot.h \
+- arch/arm/include/asm/u-boot-arm.h include/env_internal.h \
+- include/compiler.h \
++ arch/arm/include/asm/u-boot-arm.h include/vsprintf.h \
++ include/env_internal.h include/compiler.h \
+  /home/sherif/x-tools/aarch64-rpi4-linux-gnu/lib/gcc/aarch64-rpi4-linux-gnu/9.4.0/include/stddef.h \
+  arch/arm/include/asm/byteorder.h include/linux/byteorder/little_endian.h \
+  include/linux/byteorder/swab.h include/linux/byteorder/generic.h
+@@ -35,21 +31,21 @@ include/generated/autoconf.h:
+ 
+ include/config.h:
+ 
+-include/configs/rpi.h:
++include/configs/qemu-arm.h:
+ 
+-include/linux/sizes.h:
++arch/arm/include/asm/config.h:
+ 
+-include/linux/const.h:
++include/linux/kconfig.h:
+ 
+-arch/arm/include/asm/arch/timer.h:
++include/config_fallbacks.h:
+ 
+-arch/arm/include/asm/arch/base.h:
++include/errno.h:
+ 
+-include/linux/bug.h:
++include/linux/errno.h:
+ 
+-include/vsprintf.h:
++include/time.h:
+ 
+-/home/sherif/x-tools/aarch64-rpi4-linux-gnu/lib/gcc/aarch64-rpi4-linux-gnu/9.4.0/include/stdarg.h:
++include/linux/typecheck.h:
+ 
+ include/linux/types.h:
+ 
+@@ -71,16 +67,16 @@ include/asm-generic/int-ll64.h:
+ 
+ /home/sherif/x-tools/aarch64-rpi4-linux-gnu/lib/gcc/aarch64-rpi4-linux-gnu/9.4.0/include/stdbool.h:
+ 
+-include/linux/build_bug.h:
+-
+-include/linux/compiler.h:
+-
+ include/linux/printk.h:
+ 
+ include/log.h:
+ 
+ include/stdio.h:
+ 
++/home/sherif/x-tools/aarch64-rpi4-linux-gnu/lib/gcc/aarch64-rpi4-linux-gnu/9.4.0/include/stdarg.h:
++
++include/linux/compiler.h:
++
+ include/linker_lists.h:
+ 
+ include/dm/uclass-id.h:
+@@ -107,22 +103,6 @@ include/linux/list.h:
+ 
+ include/linux/poison.h:
+ 
+-include/config_distro_bootcmd.h:
+-
+-arch/arm/include/asm/config.h:
+-
+-include/linux/kconfig.h:
+-
+-include/config_fallbacks.h:
+-
+-include/errno.h:
+-
+-include/linux/errno.h:
+-
+-include/time.h:
+-
+-include/linux/typecheck.h:
+-
+ include/linux/string.h:
+ 
+ arch/arm/include/asm/string.h:
+@@ -135,6 +115,8 @@ include/asm-generic/u-boot.h:
+ 
+ arch/arm/include/asm/u-boot-arm.h:
+ 
++include/vsprintf.h:
++
+ include/env_internal.h:
+ 
+ include/compiler.h:
+diff --git a/include/config.h b/include/config.h
+index 0078d7ca2f..4fa0dde54d 100644
+--- a/include/config.h
++++ b/include/config.h
+@@ -1,6 +1,6 @@
+ /* Automatically generated - do not edit */
+-#define CFG_BOARDDIR board/raspberrypi/rpi
+-#include <configs/rpi.h>
++#define CFG_BOARDDIR board/emulation/qemu-arm
++#include <configs/qemu-arm.h>
+ #include <asm/config.h>
+ #include <linux/kconfig.h>
+ #include <config_fallbacks.h>
+-- 
+2.34.1
+

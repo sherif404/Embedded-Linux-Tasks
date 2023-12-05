@@ -1,0 +1,78 @@
+std::string app1 = "math_app";
+std::string app2 = "print_app";
+std::string app3 = "count_app";
+2023-08-31 04:00:44: Math Application: math application is started.. 
+2023-08-31 04:00:44: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:00:44: Print Application: Print application is started :) 
+2023-08-31 04:00:44: Count Application: Count application is started  :) 
+2023-08-31 04:00:44: Count Application: Count Application has been closed.. Goodbye..!
+2023-08-31 04:00:44: Count Application: Count application is started  :) 
+2023-08-31 04:00:44: Count Application: Count Application has been closed.. Goodbye..!
+2023-08-31 04:00:44: Count Application: Count application is started  :) 
+2023-08-31 04:00:44: Count Application: Count Application has been closed.. Goodbye..!
+2023-08-31 04:00:44: Math Application: math application is started.. 
+2023-08-31 04:00:44: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:00:44: Math Application: math application is started.. 
+2023-08-31 04:00:44: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:00:44: Math Application: math application is started.. 
+2023-08-31 04:00:44: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:04:51: Print Application: Print application is started :) 
+2023-08-31 04:04:51: Print Application: Print Application has been closed.. Goodbye 
+2023-08-31 04:04:51: Print Application: Print application is started :) 
+2023-08-31 04:04:51: Print Application: Print Application has been closed.. Goodbye 
+2023-08-31 04:04:51: Print Application: Print application is started :) 
+2023-08-31 04:04:51: Print Application: Print Application has been closed.. Goodbye 
+2023-08-31 04:08:28: Math Application: math application is started.. 
+2023-08-31 04:08:28: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:08:28: Math Application: math application is started.. 
+2023-08-31 04:08:28: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:08:28: Math Application: math application is started.. 
+2023-08-31 04:08:28: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:08:28: Math Application: math application is started.. 
+2023-08-31 04:08:28: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:18:24: Count Application: Count application is started  :) 
+2023-08-31 04:18:24: Count Application: Count Application has been closed.. Goodbye..!
+2023-08-31 04:18:24: Count Application: Count application is started  :) 
+2023-08-31 04:18:24: Count Application: Count Application has been closed.. Goodbye..!
+2023-08-31 04:18:24: Count Application: Count application is started  :)
+2023-08-31 04:18:24: Count Application: Count Application has been closed.. Goodbye..!
+2023-08-31 04:18:24: Math Application: math application is started.. 
+2023-08-31 04:18:24: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:18:24: Math Application: math application is started.. 
+2023-08-31 04:18:24: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:18:24: Math Application: math application is started.. 
+2023-08-31 04:18:24: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:18:24: Math Application: math application is started.. 
+2023-08-31 04:18:24: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:18:24: Math Application: math application is started.. 
+2023-08-31 04:18:24: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:18:24: Math Application: math application is started.. 
+2023-08-31 04:18:24: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:18:24: Math Application: math application is started.. 
+2023-08-31 04:18:24: Math Application: Math Application has been closed.. Goodbye..!
+2023-08-31 04:18:24: Math Application: math application is started.. 
+2023-08-31 04:18:24: Math Application: Math Application has been closed.. Goodbye..!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

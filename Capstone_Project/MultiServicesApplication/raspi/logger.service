@@ -1,0 +1,18 @@
+# >>  Actual location of ,service file on my machine: /etc/systemd/system/
+
+[Unit]
+Description=BoostLogger_DeamonService
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/sherif/Desktop/MultiServicesApplication/logger_deamon/LoggerDeamon
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+
